@@ -1,0 +1,9 @@
+{% extends 'requestbox/base.html' %}
+
+{% block content %}
+<nav class="nav">
+<a class="nav-link" href="{% url 'requestbox:mypage' %}" >Mypage</a>
+<a class="nav-link" href="{% url 'requestbox:req' %}">追加</a>
+</nav>
+<h1> Top page です。</h1>
+{% endblock %}
