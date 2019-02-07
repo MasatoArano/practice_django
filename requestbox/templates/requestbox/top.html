@@ -2,8 +2,13 @@
 
 {% block content %}
 <nav class="nav">
+{% if user.is_superuser %}
 <a class="nav-link" href="{% url 'requestbox:mypage' %}" >Mypage</a>
-<a class="nav-link" href="{% url 'requestbox:req' %}">追加</a>
+{% endif %}
 </nav>
-<h1> Top page です。</h1>
+<h1> Top page </h1>
+<p>ここでイラストのリクエストを受け付けます。<br></p>
+<a class="nav-link" href="{% url 'requestbox:req' %}">
+<button type="button" class="btn btn-dark">リクエストはここから</button>
+</a>
 {% endblock %}
