@@ -14,7 +14,7 @@
         <th scope="col">#</th>
         <th scope="col">キャラ名</th>
         <th scope="col">作品タイトル</th>
-
+        <th scope="col">#</th>
       </tr>
     </thead>
 
@@ -24,6 +24,7 @@
       <th scope="row">{{ req.id }}</th>
       <td>{{ req.chara_name }}</td>
       <td>{{ req.title }}</td>
+      <td><a href= "{% url "requestbox:delete" req.pk %}">削除</a></td>
     </tr>
     {% endfor %}
   </tbody>

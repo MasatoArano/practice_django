@@ -1,0 +1,10 @@
+{% extends 'requestbox/base.html' %}
+
+{% block content %}
+<form action="" method="POST">
+  {{ req.title }}
+<p>こちらのページを削除します</p>
+<button type="submit" class="btn btn-dark">削除</button>
+{% csrf_token %}
+</form>
+{% endblock %}

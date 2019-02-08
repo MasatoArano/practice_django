@@ -19,3 +19,8 @@ class AddView(generic.CreateView):
 class Mypage(LoginRequiredMixin, generic.ListView):
     model = Req
     login_url = '/admin/'
+    paginate_by = 10
+
+class DeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Req
+    success_url = reverse_lazy('requestbox:mypage')

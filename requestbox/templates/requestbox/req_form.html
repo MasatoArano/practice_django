@@ -2,11 +2,19 @@
 
 {% block content %}
 
-<form action="" method="POST">
+<h2>Request page</h2>
 
+<form action="" method="POST">
 {{ form.as_p }}
+
 <button type="submit" class="btn btn-dark">送信</button>
+
+<a href="{% url 'requestbox:index' %}">
+<button type="button" class="btn btn-dark">戻る</button>
+</a>
+
 {% csrf_token %}
 </form>
+
 
 {% endblock %}
