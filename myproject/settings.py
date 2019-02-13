@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ia%7gn3#^wi@he0m*xw(rk_s%!)in^6!a354gx$7-0(i7m+t6j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ masa10.m30.coreserver.jp ]
 
 
 # Application definition
